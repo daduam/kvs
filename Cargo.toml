@@ -1,0 +1,7 @@
+[package]
+name = "kvs"
+version = "0.1.0"
+edition = "2021"
+description = "command-line key-value store"
+
+[dependencies]
