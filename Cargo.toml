@@ -1,7 +1,21 @@
 [package]
 name = "kvs"
 version = "0.1.0"
-edition = "2021"
+authors = ["daduam"]
 description = "command-line key-value store"
+edition = "2021"
 
 [dependencies]
+
+[dev-dependencies]
+assert_cmd = "2.0.15"
+predicates = "3.1.2"
+
+[lib]
+test = false
+doctest = false
+
+[[bin]]
+name = "kvs"
+test = false
+doctest = false
