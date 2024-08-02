@@ -2,6 +2,10 @@ use clap::{arg, command, Command};
 
 fn main() {
     let matches = command!()
+        .name(env!("CARGO_BIN_NAME"))
+        .version(env!("CARGO_PKG_VERSION"))
+        .author(env!("CARGO_PKG_AUTHORS"))
+        .about(env!("CARGO_PKG_DESCRIPTION"))
         .arg_required_else_help(true)
         .subcommand(
             Command::new("set")
