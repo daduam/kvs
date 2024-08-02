@@ -6,6 +6,7 @@ description = "command-line key-value store"
 edition = "2021"
 
 [dependencies]
+clap = { version = "4.5.13", features = ["cargo"] }
 
 [dev-dependencies]
 assert_cmd = "2.0.15"
