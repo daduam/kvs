@@ -1,4 +1,14 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, fmt::Debug, path::PathBuf};
+
+pub enum KvsError {}
+
+impl Debug for KvsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        unimplemented!()
+    }
+}
+
+pub type Result<T> = std::result::Result<T, KvsError>;
 
 pub struct KvStore {
     store: HashMap<String, String>,
@@ -17,15 +27,19 @@ impl KvStore {
         }
     }
 
-    pub fn set(&mut self, key: String, value: String) {
-        self.store.insert(key, value);
+    pub fn set(&mut self, key: String, value: String) -> Result<()> {
+        unimplemented!()
     }
 
-    pub fn get(&self, key: String) -> Option<String> {
-        self.store.get(&key).cloned()
+    pub fn get(&self, key: String) -> Result<Option<String>> {
+        unimplemented!()
     }
 
-    pub fn remove(&mut self, key: String) {
-        self.store.remove(&key);
+    pub fn remove(&mut self, key: String) -> Result<()> {
+        unimplemented!()
+    }
+
+    pub fn open(path: impl Into<PathBuf>) -> Result<KvStore> {
+        unimplemented!()
     }
 }

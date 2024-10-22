@@ -11,6 +11,8 @@ clap = { version = "4.5.11", features = ["cargo", "derive"] }
 [dev-dependencies]
 assert_cmd = "2.0.15"
 predicates = "3.1.2"
+tempfile = "3.13.0"
+walkdir = "2.5.0"
 
 [lib]
 test = false
